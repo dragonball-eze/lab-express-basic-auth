@@ -10,7 +10,32 @@
   </head>
 
   <body>
-
+     {{#if loggedInUser}}
+         <p>Welcome {{loggedInUser}}</p>
+         <form action="/logout" method="POST">
+            <button type="submit">Logout</button>
+         </form>
+      {{/if}}
+    <nav>
+      <ul>
+        <li>
+          <a href="/signup">Signup</a>
+        </li>
+        <br/>
+        <li>
+          <a href="/login">Login</a>
+        </li>
+        <br/>
+        <li>
+          <a href="/main">Main page</a>
+        </li>
+        <br/>
+        <li>
+          <a href="/private">Private page</a>
+        </li>
+      </ul>
+      </nav>
+      <br/>
     {{{body}}}
 
     <script src="/js/script.js"></script>
